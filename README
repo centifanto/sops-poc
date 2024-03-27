@@ -1,0 +1,5 @@
+# to encrypt
+sops -e --kms <aws_kms_key_arn> unencrypted-secret.yaml > secret.enc.yaml 
+
+# to decrypt
+sops -d --kms <aws_kms_key_arn> secret.enc.yaml 
